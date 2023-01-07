@@ -9,13 +9,13 @@ const usersRoute = require("./routes/user");
 const postRoute = require("./routes/post");
 const cors = require("cors")
 
-app.use(cors({ credentials: true, origin: "https://instagram-clone-epnm.onrender.com/" }))
+app.use(cors({ credentials: true, origin: "https://instagram-clone-epnm.onrender.com" }))
 app.use(express.json());
 app.use(cookieParser());
 dotenv.config();
 
 app.use(function(req, res, next) {
-  res.header('Access-Control-Allow-Origin',"https://instagram-clone-epnm.onrender.com/" );
+  res.header('Access-Control-Allow-Origin',"https://instagram-clone-epnm.onrender.com" );
   res.header('Access-Control-Allow-Credentials', true);
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   next();
